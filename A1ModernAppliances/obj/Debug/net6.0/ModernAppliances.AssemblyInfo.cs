@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ModernAppliances")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36e9d9233a2f04ba478d5dc54531542f75e3330a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ModernAppliances")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ModernAppliances")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
