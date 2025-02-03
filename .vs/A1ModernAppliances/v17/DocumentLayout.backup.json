@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\tinke\\Documents\\GitHub\\OOP2_Assignment_1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5239E300-9117-4CE1-8E5E-B9BA3D6E03DC}|A1ModernAppliances\\ModernAppliances.csproj|c:\\users\\tinke\\documents\\github\\oop2_assignment_1\\a1modernappliances\\modernappliances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5239E300-9117-4CE1-8E5E-B9BA3D6E03DC}|A1ModernAppliances\\ModernAppliances.csproj|solutionrelative:a1modernappliances\\modernappliances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5239E300-9117-4CE1-8E5E-B9BA3D6E03DC}|A1ModernAppliances\\ModernAppliances.csproj|c:\\users\\tinke\\documents\\github\\oop2_assignment_1\\a1modernappliances\\mymodernappliances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5239E300-9117-4CE1-8E5E-B9BA3D6E03DC}|A1ModernAppliances\\ModernAppliances.csproj|solutionrelative:a1modernappliances\\mymodernappliances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5239E300-9117-4CE1-8E5E-B9BA3D6E03DC}|A1ModernAppliances\\ModernAppliances.csproj|c:\\users\\tinke\\documents\\github\\oop2_assignment_1\\a1modernappliances\\modernappliances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5239E300-9117-4CE1-8E5E-B9BA3D6E03DC}|A1ModernAppliances\\ModernAppliances.csproj|solutionrelative:a1modernappliances\\modernappliances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5239E300-9117-4CE1-8E5E-B9BA3D6E03DC}|A1ModernAppliances\\ModernAppliances.csproj|c:\\users\\tinke\\documents\\github\\oop2_assignment_1\\a1modernappliances\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -34,11 +34,12 @@
               "RelativeToolTip": "A1ModernAppliances\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T22:20:13.035Z"
+              "WhenOpened": "2025-02-02T22:20:13.035Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MyModernAppliances.cs",
               "DocumentMoniker": "C:\\Users\\tinke\\Documents\\GitHub\\OOP2_Assignment_1\\A1ModernAppliances\\MyModernAppliances.cs",
               "RelativeDocumentMoniker": "A1ModernAppliances\\MyModernAppliances.cs",
@@ -51,13 +52,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ModernAppliances.cs",
               "DocumentMoniker": "C:\\Users\\tinke\\Documents\\GitHub\\OOP2_Assignment_1\\A1ModernAppliances\\ModernAppliances.cs",
               "RelativeDocumentMoniker": "A1ModernAppliances\\ModernAppliances.cs",
               "ToolTip": "C:\\Users\\tinke\\Documents\\GitHub\\OOP2_Assignment_1\\A1ModernAppliances\\ModernAppliances.cs",
               "RelativeToolTip": "A1ModernAppliances\\ModernAppliances.cs",
-              "ViewState": "AgIAAP4AAAAAAAAAAAAAAAsBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAgwIsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T22:20:11.437Z",
               "EditorCaption": ""

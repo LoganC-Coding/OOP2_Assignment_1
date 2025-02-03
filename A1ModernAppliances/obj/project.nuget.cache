@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nsbcJV9WLTw=",
+  "dgSpecHash": "eeGHNLFnbVc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tinke\\Documents\\GitHub\\OOP2_Assignment_1\\A1ModernAppliances\\A1ModernAppliances\\ModernAppliances.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\tinke\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\tinke\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\tinke\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\tinke\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\tinke\\Documents\\GitHub\\OOP2_Assignment_1\\A1ModernAppliances\\ModernAppliances.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
