@@ -104,33 +104,47 @@ namespace ModernAppliances
         /// </summary>
         public override void DisplayRefrigerators()
         {
-            // Write "Possible options:"
+            int? numOfDoors = null;
+            bool inputPossible = false;
+            while (inputPossible is false)
+            {
+                Console.WriteLine("Possible Options:\n0 - Any\n2 - Double doors\n3 - Three doors\n4 - Four doors\nEnter number of doors: ");
+                numOfDoors = int.Parse(Console.ReadLine());
 
-            // Write "0 - Any"
-            // Write "2 - Double doors"
-            // Write "3 - Three doors"
-            // Write "4 - Four doors"
+                switch (numOfDoors){
+                    case (0):
+                        inputPossible = true;
+                        break;
+                    case (2):
+                        inputPossible = true;
+                        break;
+                    case (3):
+                        inputPossible = true;
+                        break;
+                    case (4):
+                        inputPossible = true;
+                        break;
+                    default:
+                        break;
+                }
+            }
 
-            // Write "Enter number of doors: "
+            List<Appliance> foundRefrigerators = new List<Appliance>();
 
-            // Create variable to hold entered number of doors
+            foreach (Appliance appliance in Appliances)
+            {
+                if(appliance is Refrigerator)
+                {
+                    Refrigerator refrigerator = (Refrigerator)appliance;
+                    if (numOfDoors == 0 || numOfDoors == refrigerator.Doors)
+                    {
+                        foundRefrigerators.Add(refrigerator);
+                    }
+                }
+            }
 
-            // Get user input as string and assign to variable
+            DisplayAppliancesFromList(foundRefrigerators, 0);
 
-            // Convert user input from string to int and store as number of doors variable.
-
-            // Create list to hold found Appliance objects
-
-            // Iterate/loop through Appliances
-            // Test that current appliance is a refrigerator
-            // Down cast Appliance to Refrigerator
-            // Refrigerator refrigerator = (Refrigerator) appliance;
-
-            // Test user entered 0 or refrigerator doors equals what user entered.
-            // Add current appliance in list to found list
-
-            // Display found appliances
-            // DisplayAppliancesFromList(found, 0);
         }
 
         /// <summary>
@@ -140,41 +154,50 @@ namespace ModernAppliances
         /// <param name="voltage">Vacuum voltage (or 0 for any voltage)</param>
         public override void DisplayVacuums()
         {
-            // Write "Possible options:"
-            Console.WriteLine("Possible options:");
+            string? voltInputed = null;
+            int voltToFind = 0;
+            bool inputValid = false;
+            while (inputValid is false)
+            {
+                Console.WriteLine("Possible Options:\n0 - Any\n1 - 18 volt\n2 - 24 Volt\nEnter voltage: ");
+                voltInputed = Console.ReadLine();
 
-            // Write "0 - Any"
-            // Write "1 - 18 Volt"
-            // Write "2 - 24 Volt"
+                switch (voltInputed)
+                {
+                    case ("0"):
+                        voltToFind = 0;
+                        inputValid = true;
+                        break;
 
-            // Write "Enter voltage:"
+                    case ("1"):
+                        voltToFind = 18;
+                        inputValid = true;
+                        break;
 
-            // Get user input as string
-            // Create variable to hold voltage
+                    case ("2"):
+                        voltToFind = 24;
+                        inputValid = true;
+                        break;
 
-            // Test input is "0"
-            // Assign 0 to voltage
-            // Test input is "1"
-            // Assign 18 to voltage
-            // Test input is "2"
-            // Assign 24 to voltage
-            // Otherwise
-            // Write "Invalid option."
-            // Return to calling (previous) method
-            // return;
+                    default:
+                        Console.WriteLine("Input invalid");
+                        break;
+                }
+            }
+            List<Appliance> foundVacuums = new List<Appliance>();
 
-            // Create found variable to hold list of found appliances.
-
-            // Loop through Appliances
-            // Check if current appliance is vacuum
-            // Down cast current Appliance to Vacuum object
-            // Vacuum vacuum = (Vacuum)appliance;
-
-            // Test grade is "Any" or grade is equal to current vacuum grade and voltage is 0 or voltage is equal to current vacuum voltage
-            // Add current appliance in list to found list
-
-            // Display found appliances
-            // DisplayAppliancesFromList(found, 0);
+            foreach (Appliance appliance in Appliances)
+            {
+                if (appliance is Vacuum)
+                {
+                    Vacuum vacuum = (Vacuum)appliance;
+                    if (voltToFind == 0 || voltToFind == vacuum.BatteryVoltage)
+                    {
+                        foundVacuums.Add(vacuum);
+                    }
+                }
+            }
+            DisplayAppliancesFromList(foundVacuums, 0);
         }
 
         /// <summary>
@@ -216,6 +239,14 @@ namespace ModernAppliances
 
             // Display found appliances
             // DisplayAppliancesFromList(found, 0);
+            Console.WriteLine("Enter room type (K for Kitchen, W for Work site): ");
+            char roomType = char.ToUpper(Console.ReadKey().KeyChar);
+            Console.WriteLine();
+
+            List<Appliance> microwaves = appliances
+                .FindAll(a => a is Microwave m && m.RoomType[0] == roomType);
+
+            DisplayAppliancesFromList(microwaves, 0);
         }
 
         /// <summary>
