@@ -239,14 +239,7 @@ namespace ModernAppliances
 
             // Display found appliances
             // DisplayAppliancesFromList(found, 0);
-            Console.WriteLine("Enter room type (K for Kitchen, W for Work site): ");
-            char roomType = char.ToUpper(Console.ReadKey().KeyChar);
-            Console.WriteLine();
-
-            List<Appliance> microwaves = appliances
-                .FindAll(a => a is Microwave m && m.RoomType[0] == roomType);
-
-            DisplayAppliancesFromList(microwaves, 0);
+            
         }
 
         /// <summary>
