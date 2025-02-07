@@ -48,8 +48,12 @@ namespace ModernAppliances
 
             // Test appliance was not found (foundAppliance is null)
             if (foundAppliance == null)
+            {
                 // Write "No appliances found with that item number."\
                 Console.WriteLine("No appliances found with that item number.");
+                Console.WriteLine();
+            }
+
 
             // Otherwise (appliance was found)
             else
@@ -62,12 +66,15 @@ namespace ModernAppliances
 
                     // Write "Appliance has been checked out."
                     Console.WriteLine("Appliance has been checked out.");
+
+                    Console.WriteLine();
                 }
                 // Otherwise (appliance isn't available)
                 else
                 {
                     // Write "The appliance is not available to be checked out."
                     Console.WriteLine("The appliance is not available to be checked out.");
+                    Console.WriteLine();
                 }
             }
         }
@@ -293,18 +300,27 @@ namespace ModernAppliances
         public override void DisplayDishwashers()
         {
             // Write "Possible options:"
+            Console.WriteLine("Possible options:");
 
             // Write "0 - Any"
             // Write "1 - Quietest"
             // Write "2 - Quieter"
             // Write "3 - Quiet"
             // Write "4 - Moderate"
+            Console.WriteLine("0 - Any");
+            Console.WriteLine("1 - Quietest");
+            Console.WriteLine("2 - Quieter");
+            Console.WriteLine("3 - Quiet");
+            Console.WriteLine("4 - Moderate");
 
             // Write "Enter sound rating:"
+            Console.WriteLine("Enter sound rating:");
 
             // Get user input as string and assign to variable
+            string option = Console.ReadLine();
 
             // Create variable that holds sound rating
+            string soundRating = "";
 
             // Test input is "0"
             // Assign "Any" to sound rating variable
@@ -319,18 +335,55 @@ namespace ModernAppliances
             // Otherwise (input is something else)
             // Write "Invalid option."
             // Return to calling method
+            switch (option)
+            {
+                case "0":
+                    soundRating = "Any";
+                    break;
+                case "1":
+                    soundRating = "Qt";
+                    break;
+                case "2":
+                    soundRating = "Qr";
+                    break;
+                case "3":
+                    soundRating = "Qu";
+                    break;
+                case "4":
+                    soundRating = "M";
+                    break;
+                default:
+                    Console.WriteLine("Invalid option.");
+                    DisplayDishwashers();
+                    break;
+            }
 
             // Create variable that holds list of found appliances
+            List<Appliance> found = new List<Appliance>();
+            //foreach (Appliance appliance in Appliances)
+            //{
+            //    found.Add(appliance);
+            //}
 
             // Loop through Appliances
             // Test if current appliance is dishwasher
             // Down cast current Appliance to Dishwasher
+            foreach (Appliance appliance in Appliances)
+            {
+                if (appliance is Dishwasher)
+                {
+                    Dishwasher dishwasher = (Dishwasher)appliance;
+                    if (soundRating == "Any" || soundRating == dishwasher.SoundRating)
+                    {
+                        found.Add(dishwasher);
+                    }
+                }
+            }
 
-            // Test sound rating is "Any" or equals soundrating for current dishwasher
-            // Add current appliance in list to found list
-
+          
             // Display found appliances (up to max. number inputted)
             // DisplayAppliancesFromList(found, 0);
+            DisplayAppliancesFromList(found, 0);
         }
 
         /// <summary>
