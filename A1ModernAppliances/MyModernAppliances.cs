@@ -342,19 +342,28 @@ namespace ModernAppliances
             Console.Write("Enter number of items: ");
 
             // Get user input as string and assign to variable
+            string items = Console.ReadLine();
 
             // Convert user input from string to int
+            int num = Convert.ToInt32(items);
 
             // Create variable to hold list of found appliances
+            List<Appliance> found = new List<Appliance>();
 
             // Loop through appliances
             // Add current appliance in list to found list
+            foreach (Appliance appliance in Appliances)
+            {
+                found.Add(appliance);
+            }
 
             // Randomize list of found appliances
             // found.Sort(new RandomComparer());
+            found.Sort(new RandomComparer());
 
             // Display found appliances (up to max. number inputted)
             // DisplayAppliancesFromList(found, num);
+            DisplayAppliancesFromList(found, num);
         }
     }
 }
