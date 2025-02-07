@@ -204,42 +204,87 @@ namespace ModernAppliances
         /// Displays microwaves
         /// </summary>
         public override void DisplayMicrowaves()
+
         {
-            // Write "Possible options:"
 
-            // Write "0 - Any"
-            // Write "1 - Kitchen"
-            // Write "2 - Work site"
+            string roomTypeDesired = "";
 
-            // Write "Enter room type:"
+            char roomType = '0';
 
-            // Get user input as string and assign to variable
+            bool inputValid = false;
 
-            // Create character variable that holds room type
+            while (inputValid is false)
 
-            // Test input is "0"
-            // Assign 'A' to room type variable
-            // Test input is "1"
-            // Assign 'K' to room type variable
-            // Test input is "2"
-            // Assign 'W' to room type variable
-            // Otherwise (input is something else)
-            // Write "Invalid option."
-            // Return to calling method
-            // return;
+            {
 
-            // Create variable that holds list of 'found' appliances
+                Console.WriteLine("Possible options:\n0 - Any\n1 - Kitchen\n2 - Work site\nEnter room type:");
 
-            // Loop through Appliances
-            // Test current appliance is Microwave
-            // Down cast Appliance to Microwave
+                roomTypeDesired = Console.ReadLine();
 
-            // Test room type equals 'A' or microwave room type
-            // Add current appliance in list to found list
+                switch (roomTypeDesired)
 
-            // Display found appliances
-            // DisplayAppliancesFromList(found, 0);
-            
+                {
+
+                    case "0":
+
+                        roomType = 'A';
+
+                        inputValid = true;
+
+                        break;
+
+                    case "1":
+
+                        roomType = 'K';
+
+                        inputValid = true;
+
+                        break;
+
+                    case "2":
+
+                        roomType = 'W';
+
+                        inputValid = true;
+
+                        break;
+
+                    default:
+
+                        Console.WriteLine("Invalid input");
+
+                        break;
+
+                }
+
+            }
+
+            List<Appliance> foundMicrowaves = new List<Appliance>();
+
+            foreach (Appliance appliance in Appliances)
+
+            {
+
+                if (appliance is Microwave)
+
+                {
+
+                    Microwave microwave = (Microwave)appliance;
+
+                    if (roomType == 'A' || roomType == microwave.RoomType)
+
+                    {
+
+                        foundMicrowaves.Add(microwave);
+
+                    }
+
+                }
+
+            }
+
+            DisplayAppliancesFromList(foundMicrowaves, 0);
+
         }
 
         /// <summary>
